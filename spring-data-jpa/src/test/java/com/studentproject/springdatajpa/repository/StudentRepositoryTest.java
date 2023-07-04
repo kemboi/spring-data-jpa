@@ -20,10 +20,10 @@ private StudentRepository studentRepository;
     @Test
 public void saveStudent(){
     Student student = Student.builder()
-            .emailId("zachary3@gmail.com")
-            .firstName("Zachary")
-            .lastName("Kamwaro")
-           .guardian(new Guardian("+254708803873","Peter"))
+            .emailId("kevans@gmail.com")
+            .firstName("Allan")
+            .lastName("Kimani")
+           .guardian(new Guardian("+254793939333","Peter"))
            //.getGuardianMobile("+254708803873")
             //.guardianName("Agnes")
             .build();

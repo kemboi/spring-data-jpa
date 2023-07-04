@@ -18,6 +18,6 @@ public class Course {
     @Column(name = "courseId", nullable = false)
     private Long courseId;
     private String title;
-    private String credit;
+    private int credit;
 
 }
