@@ -7,11 +7,12 @@ import org.hibernate.engine.internal.Cascade;
 @Getter
 @Setter
 @Entity
-@ToString
+@ToString(exclude = "course")
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 public class CourseMaterial {
+
     @Getter(AccessLevel.NONE)
     @Setter(AccessLevel.NONE)
     @Id
@@ -20,7 +21,8 @@ public class CourseMaterial {
     @Column(name = "course_material_id", nullable = false)
     private Long courseMaterialId;
     private String url;
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL
+    ,fetch = FetchType.EAGER)
     @JoinColumn(name = "course_Id",
     referencedColumnName = "courseId")
     private Course course;

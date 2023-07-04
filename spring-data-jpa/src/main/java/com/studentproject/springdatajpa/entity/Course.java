@@ -9,6 +9,7 @@ import lombok.*;
 @AllArgsConstructor
 @Entity
 @Builder
+@ToString
 public class Course {
     @Getter(AccessLevel.NONE)
     @Setter(AccessLevel.NONE)
