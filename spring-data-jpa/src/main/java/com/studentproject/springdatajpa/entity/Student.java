@@ -15,7 +15,7 @@ import java.util.Objects;
 @Builder
 @Table(name = "tbl_student",
 uniqueConstraints = @UniqueConstraint(name = "emailId",
-columnNames = "email_address"))
+columnNames =  "email_address"))
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE,
@@ -24,7 +24,7 @@ public class Student {
     allocationSize = 100)
     @Column(name = "student_id", nullable = false)
     private Long studentId;
-
+    @Column(name = "first_name", nullable = false)
     private String firstName;
     private String lastName;
     @Column(name = "email_address",
