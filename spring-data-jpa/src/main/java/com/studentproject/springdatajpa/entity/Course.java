@@ -15,10 +15,16 @@ public class Course {
     @Setter(AccessLevel.NONE)
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "Course_GEN")
-    @SequenceGenerator(name = "Course_GEN", sequenceName = "Course_SEQ")
+    @SequenceGenerator(name = "Course_GEN", sequenceName = "Course_SEQ"
+    , initialValue = 1)
     @Column(name = "courseId", nullable = false)
     private Long courseId;
+    @Column(unique = true)
     private String title;
     private int credit;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "teacher_id",
+    referencedColumnName = "teacher_id")
+    private Teacher teacher;
 
 }

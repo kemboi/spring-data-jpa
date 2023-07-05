@@ -11,11 +11,11 @@ import java.util.List;
 @SpringBootTest
 class CourseMaterialRepoTest {
     @Autowired
-    CourseMaterialRepo courseMaterialRepo;
+    private CourseMaterialRepo courseMaterialRepo;
     @Test
 public void saveCourseMaterial(){
         Course course = Course.builder()
-                .title("DSA")
+                .title(".NET")
                 .credit(10)
                 .build();
         CourseMaterial courseMaterial = CourseMaterial.builder()
